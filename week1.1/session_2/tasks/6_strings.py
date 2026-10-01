@@ -4,11 +4,11 @@
 user_string = input("Enter a string: ")
 
 print(f"\nOriginal String: {user_string}")
-print(f"Modified String 1: {user_string.lower()}")
-print(f"Modified String 2: {user_string.upper()}")
+print(f"Modified String 1: {user_string.lower()}") #Every character is lower case
+print(f"Modified String 2: {user_string.upper()}") #Every character is upper
 print(f"Modified String 3: {user_string.strip()}")
-print(f"Modified String 4: {user_string.replace('a', '@')}")
-print(f"Modified String 5: {user_string.capitalize()}")
+print(f"Modified String 4: {user_string.replace('a', '@')}") #Any character with first param is replaced with second param
+print(f"Modified String 5: {user_string.capitalize()}") #String starts with capital letter  
 print(f"Modified String 6: {user_string[::-1]}")
 print(f"Modified String 7: {user_string.title()}")
 print(f"Modified String 8: {len(user_string)}")
