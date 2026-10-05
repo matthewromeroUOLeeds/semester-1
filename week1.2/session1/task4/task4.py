@@ -3,18 +3,27 @@
 fruit = {"apple", "orange", "tomato"}
 vegetables = {"leek", "tomato", "potato"}
 
-# What do you think will be printed here?
+# What do you think will be printed here? - tomato
 
 both = fruit.intersection(vegetables)
 print(both)
 
-# Why does the following code diplay five items?
+# Why does the following code diplay five items? - union method returns elements in both sets but ignores duplicates. Tomato only appears once.
 
 food = fruit.union(vegetables)
 print(food)
 
 # Add an item to fruit
 
+fruit.add("grape")
+print(fruit)
+
 # Remove an item from vegetables
 
+vegetables.discard("leek")
+print(vegetables)
+
 # Find and display symmetric difference of the two sets
+
+sym_diff = fruit.symmetric_difference(vegetables)
+print(sym_diff)
