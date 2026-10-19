@@ -13,5 +13,8 @@ for i in values:
 
 print(newval)
 
+newval1 = [i*2 if i%2==0 else i for i in values]
+
+print(newval1)
 # write the list comprehension equivalent to the `for` loop
 

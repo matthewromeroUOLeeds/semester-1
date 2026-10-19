@@ -2,6 +2,23 @@
 
 
 # Prompt the user for their name, age, and favorite colour.
+info = []
+name = input("Enter Name: ")
+info.append(name.lower())
+age = int(input("Enter Age: "))
+info.append(age)
+colour = input("Enter Favourite Colour: ")
+info.append(colour.lower())
+
+
+
+print(info)
+
+with open("user_info.txt", "a") as infile:
+    for entry in info:
+        infile.write(f"{entry} \n")
+
+
 
 # Open a file called 'user_info.txt' for reading
 

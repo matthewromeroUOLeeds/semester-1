@@ -8,7 +8,7 @@ states = { "red":4, "red_amber":3, "green":5, "amber":3 }
 
 systime = 0
 maxtime = int(input())  # read an integer number of steps (>0)
-
+ 
 state = "red"
 
 

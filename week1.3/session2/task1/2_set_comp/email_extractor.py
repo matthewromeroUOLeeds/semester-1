@@ -8,6 +8,11 @@ raw_emails = ["UserA@gmail.com", "admin@site.com", "usera@gmail.com", "UserB@yah
 
 # print the clean set of email addressed
 
+clean_emails = {email.lower() for email in raw_emails}
+print(clean_emails)
+
+final_emails = {email for email in clean_emails if '@' in email}
+print(final_emails)
 
 # Optional - consider the case where some of the emails are not valid (i.e., without the @ in the email address).
 # raw_emails2 = ["UserA@gmail.com", "SYSTEM_ALERT", "usera@gmail.com", "admin@site.com", "UserB@yahoo.com"]
