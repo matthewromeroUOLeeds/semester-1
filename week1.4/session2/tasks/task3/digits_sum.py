@@ -17,14 +17,24 @@ def digits_sum(number):
     Returns:
         int: The sum of the digits of the input integer.
     """
-    # complete your code here
-    # base case
 
-    # recursive case
+    first_digit = int(str(number)[0])
+
+    if len(str(number)) == 1:
+        return first_digit
+    
+    leftover = int(str(number)[1:])
+
+    return first_digit + digits_sum(leftover)
+
+
+    
+    
+
 
 
 # check if correct output is produced
-print(digits_sum(987))  # Output: 24
+print(digits_sum(24))  # Output: 24
 print(digits_sum(12345))  # Output: 15
 
 

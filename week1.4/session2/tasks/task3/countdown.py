@@ -19,6 +19,12 @@ def countdown(n):
 
     # recursive case
 
+    if n == 0:
+        print(0)
+        return None
+    print(n)
+    countdown(n-1)
+
 
 # check if correct output is produced
 countdown(30)    # 30 ... 0 (Note: each number is printed in a separate line)

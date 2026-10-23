@@ -28,6 +28,27 @@ def writePGM( filename, image ):
     '''
     width,height,max_gray,pixels = image  # unpack the tuple
 
+    with open(filename, 'w') as f:
+        f.write('P2 \n')
+        f.write(f'{width} {height}\n')
+        f.write(f'{max_gray} \n')
+
+        space_taken = len(str(max_gray))
+        
+        for line in pixels:
+            line_string = ""
+
+            for pixel in line:
+                pixel_space = len(str(pixel))
+                space = space_taken - pixel_space
+                print(space)
+
+                line_string = line_string + (space * ' ') + ' ' + str(pixel) 
+
+            f.write(f'{line_string.strip()}\n')
+
+
+
     # open a file for writing
     # write the data in PGM format
     # don't forget the PGM code "P2"
@@ -56,3 +77,5 @@ print(f"Image with width {image[0]} and height {image[1]}")
 print(f"{image[3]}")
 
 # write further code to test your own functions
+
+writePGM('new_feep.pgm', image)

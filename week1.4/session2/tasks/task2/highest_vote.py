@@ -1,6 +1,6 @@
 # Week 4, Session 2: Task 2
 
-def most_frequent_string(votes):
+def most_frequent_string(votes, most_frequent_string = None, most_frequent_count = None):
     """
     This function identifies the string that appears most frequently
     (highest count) in the votes argument and returns it along with the count
@@ -20,6 +20,14 @@ def most_frequent_string(votes):
     # Your task is to complete the body of the function based on the details in the docstring.
     # Hint 1: You can complete this task with for loops or comprehensions 
     # Hint 2: Think about the properties of the various collection-types
+
+    for element in votes:
+        if votes.count(element) > votes.count(most_frequent_string):
+            most_frequent_string = element
+            most_frequent_count = votes.count(element)
+    
+    return most_frequent_string, most_frequent_count
+
 
 
 fruit = ['date', 'apple', 'cherry', 'date', 'apple', 'apple', 'elderberry',

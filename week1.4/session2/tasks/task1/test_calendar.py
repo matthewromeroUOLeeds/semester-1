@@ -17,7 +17,7 @@ print(calendar.month(2025, 10))
 # namely the w and l parameters. Write code to made two more function calls
 # to the month function with different values of w and l and observe the
 # output.
-
+print(calendar.month(2025, 10, 3, 1))
 
 # While at https://docs.python.org/3/library/calendar.html, explore
 # the calendar function(calendar.calendar, yes the function is called
