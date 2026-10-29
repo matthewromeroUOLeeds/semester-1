@@ -2,6 +2,10 @@
 
 # Write a program here to create a Dataset containing data
 # from a file named by the user
-
+from data import Dataset
 # Your program should display dataset size, mean and median,
 # followed by the individual values (using a for loop)
+
+dataset = Dataset()
+
+dataset.load_data('data.txt')

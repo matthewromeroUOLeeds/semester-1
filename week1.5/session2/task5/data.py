@@ -21,16 +21,21 @@ class Dataset:
 
         Any existing data will be deleted.
         """
+        with open(filename, "w") as infile:
+            print(infile)
+
 
     def __len__(self):
         """
         Returns the size of this Dataset.
         """
+        return len(self.data)
 
     def __getitem__(self, index):
         """
         Returns the value at the specified position in this Dataset.
         """
+        return self.data[index]
 
     def mean(self):
         """
