@@ -21,6 +21,9 @@ class Rectangle:
 
     # Implement methods is_square(), area() & perimeter() here
     # (See README.md for details of what they should do)
+    '''
+        Methods on rectangle instance
+    '''
 
     def is_square(self):
         '''

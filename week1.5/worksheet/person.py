@@ -10,7 +10,11 @@ class Person:
     # Write a constructor here to create and initialize name and
     # birth fields (see README.md for further details)
 
+
     def __init__(self, name, birth):
+        '''
+            Constructor
+        '''
 
         if not isinstance(name, str):
             raise TypeError("Name field must be of type string")
@@ -25,6 +29,10 @@ class Person:
 
     # Implement methods initials() and is_birthday() here
     # (see README.md for further details)
+
+    '''
+        Methods on Person instance 
+    '''
 
     def initials(self):
         '''

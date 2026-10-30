@@ -19,6 +19,10 @@ class Point:
         self.x = x
         self.y = y
 
+    """
+        Returns distance of this Point from the origin.
+     """ 
+
     def distance(self):
         """
         Returns distance of this Point from the origin.
