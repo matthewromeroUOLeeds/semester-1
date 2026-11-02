@@ -41,12 +41,29 @@ class QuakeDataset:
         # dictionaries. You will need to extract the required values from
         # each dictionary and convert them into the required types before
         # creating a Quake object and storing it in the list.
+        
+        self.data.clear()
+        stream = self.feed.reader()
+
+        for q in stream:
+            when = datetime.fromisoformat(q["time"])
+            longitude = float(q["longitude"])
+            latitude = float(q["latitude"])
+            depth = float(q['depth'])
+            magnitude = float(q['mag'])
+
+            quake = Quake(when, longitude, latitude, depth, magnitude)
+            self.data.append(quake)
+
+
 
     def __len__(self):
         """
         Returns the size of this dataset.
         """
         # Write code here that returns the number of quakes downloaded
+        print(len(self.data))
+        return len(self.data)
 
     def __str__(self):
         """
@@ -54,6 +71,9 @@ class QuakeDataset:
         """
         # Write code here to create and return a string representation
         # (Include number of quakes and details of the feed that was used)
+        self.read_feed()
+        return f'{len(self.data)} earthquakes, from {self.feed} \nMean Depth: {round(self.mean_depth(),2)}km \nMean Magnitude: {round(self.mean_magnitude(),1)} '
+
 
     def mean_depth(self):
         """
@@ -71,6 +91,11 @@ class QuakeDataset:
         """
         # Write code here that computes the mean magnitude of all the
         # quakes currently in the dataset
+        if len(self.data) == 0:
+            raise QuakeDatasetError("dataset is empty")
+
+        total = sum(quake.magnitude for quake in self.data)
+        return total / len(self.data)
 
     def shallowest_quake(self):
         """
