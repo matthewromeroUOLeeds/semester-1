@@ -1,0 +1,2 @@
+INFO:root:calculate_average(): started
+DEBUG:root:263 divided by 3

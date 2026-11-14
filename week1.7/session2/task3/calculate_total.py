@@ -6,7 +6,7 @@ def calculate_total(price, tax_rate):
     total = price + tax
     return total
 
-item_price = 20
+item_price = "20"
 tax_percentage = 0.05
 
 final_amount = calculate_total(item_price, tax_percentage)

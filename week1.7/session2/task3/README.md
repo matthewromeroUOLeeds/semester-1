@@ -1,4 +1,4 @@
-# Week 1.7, Session 2: Task 3
+p# Week 1.7, Session 2: Task 3
 
 `calculate_total.py` is a simple Python program to calculate a retail total by multiplying a base price by a tax rate and adding the result together.
 
